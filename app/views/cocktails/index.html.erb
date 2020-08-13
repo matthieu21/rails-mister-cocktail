@@ -1,0 +1,23 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1514361892635-6b07e31e75f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+  <div class="container">
+    <h1>List of Cocktails</h1>
+    <p>Test the best cocktails ever !</p>
+    <%= link_to 'Create a new cocktail !', new_cocktail_path(@cocktail), class: 'text-white' %>
+  </div>
+  <div class="container">
+    <div class="cards">
+      <% @cocktails.each do |cocktail| %>
+
+
+        <%= link_to cocktail_path(cocktail) do  %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+            <h4><%= cocktail.name %></h4>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+  </div>
+
+
+</div>
